@@ -629,7 +629,7 @@ img {
 }
 
 .experience__active[data-content] {
-  display: none;
+  /* display: none; */
 }
 
 .experience__button.experience__active {
@@ -980,7 +980,7 @@ html {
   }
 
   .section {
-    padding: 6rem 0 4rem;
+    padding: 4rem 0 4rem;
   }
 
   .section__subtitle {
@@ -1148,7 +1148,7 @@ html {
   }
 
   .home__social {
-    transform: translateX(-34rem);
+    transform: translateX(-38rem);
     grid-template-columns: max-content;
   }
 
