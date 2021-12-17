@@ -350,9 +350,6 @@ img {
   background-color: var(--button-hover-color);
   transition: 0.3s;
 }
-.home__scroll-mouse {
-  font-size: 2rem;
-}
 .home__scroll-name {
   font-size: var(--small-font-size);
   color: var(--title-color);
@@ -362,6 +359,16 @@ img {
 .home__scroll-arrow {
   font-size: 1.25rem;
 }
+
+/*================== Icons ===================*/
+i {
+  padding: 0.25rem;
+}
+.icon-fluent {
+  margin-top: 0.25rem;
+}
+
+
 
 /*================== Buttons ===================*/
 .button {
@@ -655,10 +662,6 @@ img {
   font-size: var(--small-font-size);
 }
 
-.services__button:hover .button__icon {
-  transform: translateX(0.25rem);
-}
-
 .services__modal {
   position: fixed;
   top: 0;
@@ -738,9 +741,6 @@ img {
 }
 .portfolio__description{
   margin-bottom: var(--mb-0-75);
-}
-.portfolio__button:hover .button__icon{
-  transform: translateX(.25rem);
 }
 .swiper-button-prev::after,
 .swiper-button-next::after{
@@ -837,7 +837,7 @@ img {
   bottom: -20%;
   background-color: var(--first-color);
   opacity: 0.8;
-  padding: 0 0.3rem;
+  padding: 0.5rem 0.2rem 0.2rem;
   border-radius: 0.4rem;
   z-index: var(--z-tooltip);
   transition: 0.3s;
