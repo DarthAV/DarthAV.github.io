@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"); */
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap'); */
 @font-face { font-family: "Gotham"; src: url("font/GothamSSm-Book_Web.woff2") format('woff2'); }
 
 
@@ -354,7 +354,6 @@ img {
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
-  margin-right: var(--mb-0-25);
 }
 .home__scroll-arrow {
   font-size: 1.25rem;
@@ -364,7 +363,7 @@ img {
 i {
   padding: 0.25rem;
 }
-.icon-fluent {
+i[class^="icon-"], i[class*=" icon-"] {
   margin-top: 0.25rem;
 }
 
