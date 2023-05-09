@@ -1,0 +1,36 @@
+name: Update LinkedIn Info
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
+
+jobs:
+  update_linkedin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      
+      - name: Install dependencies
+        run: pip install python-linkedin pyyaml
+      
+      - name: Retrieve LinkedIn info
+        run: |
+          python get_linkedin_info.py
+        env:
+          ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          FILE_PATH: 'linkedin_info.yml'
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "ansh.verma22@outlook.com"
+          git config --local user.name "Ansh"
+          git add linkedin_info.yml
+          git commit -m "Update linkedin info"
+          git push
+      
