@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://www.anshverma.com",
   "dependencies": {
+    "@fluentui/react-icons": "^2.0.201",
     "@nextui-org/react": "^1.0.0-beta.12",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

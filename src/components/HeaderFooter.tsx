@@ -1,5 +1,6 @@
-import { Navbar, Link, Text, Switch } from "@nextui-org/react";
+import { Navbar, Link, Text, Button } from "@nextui-org/react";
 import useDarkMode from "use-dark-mode";
+import { WeatherMoon24Regular, WeatherSunny24Regular } from "@fluentui/react-icons";
 
 const navSections = ["Home", "About", "Experience", "Education", "Projects", "Skills"];
 
@@ -19,7 +20,10 @@ export function Header() {
         </Text>
       </Navbar.Brand>
 
-      <Navbar.Content enableCursorHighlight hideIn={collapse_sizes}>
+      <Navbar.Content enableCursorHighlight hideIn={collapse_sizes} variant={"highlight"}>
+        {/* <Navbar.Link href="#" isActive>
+          Home
+        </Navbar.Link> */}
         {navSections.map((item) => (
           <Navbar.Link key={item} href="#">
             {item}
@@ -29,10 +33,10 @@ export function Header() {
 
       <Navbar.Content>
         <Navbar.Toggle aria-label="toggle navigation" showIn={collapse_sizes} />
-        <Switch
-          size="sm"
-          checked={darkMode.value}
-          onChange={() => darkMode.toggle()}
+        <Button
+          auto light
+          icon={darkMode.value ? <WeatherSunny24Regular /> : <WeatherMoon24Regular />}
+          onClick={() => darkMode.toggle()}
         />
       </Navbar.Content>
 
