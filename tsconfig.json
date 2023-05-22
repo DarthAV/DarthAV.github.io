@@ -18,11 +18,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "removeComments": true,
   },
   "include": [
     "src",
     "assets",
-    "components"
+    "components",
+    "pages"
   ]
 }

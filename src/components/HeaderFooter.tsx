@@ -1,77 +1,67 @@
-import { Navbar, Link, Text, Button } from "@nextui-org/react";
-import useDarkMode from "use-dark-mode";
-import { WeatherMoon24Regular, WeatherSunny24Regular } from "@fluentui/react-icons";
+import { Navbar, Link, Button, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, Divider } from "@nextui-org/react";
+import ThemeChanger from "./ThemeChanger";
 
-const navSections = ["Home", "About", "Experience", "Education", "Projects", "Skills"];
 
-export function Header() {
-  const variant = "sticky";
+interface HeaderFooterProps {
+  navSections: string[];
+}
+
+export function Header({ navSections }: HeaderFooterProps) {
   const collapse_sizes = "xs";
-
-  const darkMode = useDarkMode(false);
 
   return (
     // https://nextui.org/docs/components/navbar
-    <Navbar isBordered variant={variant}>
+    <Navbar isBordered position="sticky" className="flex justify-between items-center" >
 
-      <Navbar.Brand>
-        <Text h4 color="inherit">
+      <NavbarBrand>
+        <p className="text-2xl font-bold">
           Ansh
-        </Text>
-      </Navbar.Brand>
-
-      <Navbar.Content enableCursorHighlight hideIn={collapse_sizes} variant={"highlight"}>
-        {/* <Navbar.Link href="#" isActive>
-          Home
-        </Navbar.Link> */}
+        </p>
+      </NavbarBrand>
+      <NavbarContent className="mx-4 hidden sm:flex "/* enableCursorHighlight variant={"highlight"} */>
         {navSections.map((item) => (
-          <Navbar.Link key={item} href="#">
-            {item}
-          </Navbar.Link>
+          <NavbarItem key={item}>
+            <Link href={`#${item}`}>
+              {item}
+            </Link>
+          </NavbarItem>
         ))}
-      </Navbar.Content>
+      </NavbarContent>
 
-      <Navbar.Content>
-        <Navbar.Toggle aria-label="toggle navigation" showIn={collapse_sizes} />
-        <Button
-          auto light
-          icon={darkMode.value ? <WeatherSunny24Regular /> : <WeatherMoon24Regular />}
-          onClick={() => darkMode.toggle()}
-        />
-      </Navbar.Content>
-
-      <Navbar.Collapse>
+      <NavbarContent className="mx-4">
+        <NavbarMenuToggle aria-label="toggle navigation menu" className="sm:hidden" />
+        <ThemeChanger />
+      </NavbarContent>
+      <NavbarMenu>
         {navSections.map((item) => (
-          <Navbar.CollapseItem key={item}>
+          <NavbarMenuItem key={item}>
             <Link
-              color="inherit"
-              css={{
-                minWidth: "100%",
-              }}
               href="#"
             >
               {item}
             </Link>
-          </Navbar.CollapseItem>
+          </NavbarMenuItem>
         ))}
-      </Navbar.Collapse>
-    </Navbar>
+      </NavbarMenu>
+    </Navbar >
   );
 };
 
 
-export function Footer() {
+export function Footer({ navSections }: HeaderFooterProps) {
   return (
-    <footer className="footer">
-      <Text color="inherit" b>
+    <footer className="flex flex-col items-center justify-center h-24">
+      <p className="text-2xl font-bold">
         Ansh Verma
-      </Text>
-      {/* <Spacer />
-      {navSections.map((item) => (
-        <Link pad key={item} href="#">
-          {item}
-        </Link>
-      ))} */}
-    </footer>
+      </p >
+      <Divider />
+      <div className="flex flex-wrap h-5 gap-4">
+        {navSections.map((item) => (
+          <Link key={item} href={`#${item}`}>
+            {item}
+          </Link>
+        ))}
+      </div>
+    </footer >
   );
 }

@@ -1,25 +1,23 @@
 import { Header, Footer } from "../components/HeaderFooter";
-import { Text } from "@nextui-org/react";
 
 
 
 export function Home() {
+  const navSections = ["Home", "About", "Experience", "Education", "Skills"];
   return (
     <div>
-      <Header />
-      <div >
-        <Text h1
-          css={{
-            textGradient: "45deg, $blue600 -20%, $pink600 50%",
-          }}>
+      <Header navSections={navSections} />
+      <div>
+        <p className="text-4xl font-bold">
           Hi, I'm Ansh Verma
-        </Text >
+        </p>
         <h3> Computer Science Student</h3>
-        <p>
-          <strong>University of Illinois Urbana-Champaign</strong>
+        <p className="text-xl font-bold">
+          University of Illinois Urbana-Champaign
         </p>
       </div>
-      <Footer />
+      <br />
+      <Footer navSections={navSections} />
     </div>
   );
 }
