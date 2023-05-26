@@ -1,6 +1,6 @@
+import { WeatherMoon24Regular, WeatherSunny24Regular } from "@fluentui/react-icons";
 import { Button } from "@nextui-org/react";
 import { useTheme } from "next-themes";
-import { WeatherSunny24Regular, WeatherMoon24Regular } from "@fluentui/react-icons";
 
 
 const ThemeChanger = () => {
@@ -14,7 +14,7 @@ const ThemeChanger = () => {
         <Button
             isIconOnly variant="light"
             startIcon={isDark ? <WeatherSunny24Regular /> : <WeatherMoon24Regular />}
-            onClick={toggleTheme}
+            onPress={toggleTheme}
         />
     )
 }

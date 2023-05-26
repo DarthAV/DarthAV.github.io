@@ -1,6 +1,6 @@
 import { NextUIProvider } from '@nextui-org/react';
-import { Home } from './pages/Home';
 import { ThemeProvider } from "next-themes";
+import { Home } from './pages/Home';
 
 
 function App() {

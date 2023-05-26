@@ -1,4 +1,4 @@
-import { Navbar, Link, Button, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, Divider } from "@nextui-org/react";
+import { Divider, Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import ThemeChanger from "./ThemeChanger";
 
 
@@ -7,14 +7,12 @@ interface HeaderFooterProps {
 }
 
 export function Header({ navSections }: HeaderFooterProps) {
-  const collapse_sizes = "xs";
-
   return (
     // https://nextui.org/docs/components/navbar
     <Navbar isBordered position="sticky" className="flex justify-between items-center" >
 
       <NavbarBrand>
-        <p className="text-2xl font-bold">
+        <p className="text-xl font-bold">
           Ansh
         </p>
       </NavbarBrand>
@@ -55,13 +53,16 @@ export function Footer({ navSections }: HeaderFooterProps) {
         Ansh Verma
       </p >
       <Divider />
-      <div className="flex flex-wrap h-5 gap-4">
+      <div className="flex flex-wrap h-5 gap-4 justify-center">
         {navSections.map((item) => (
           <Link key={item} href={`#${item}`}>
             {item}
           </Link>
         ))}
       </div>
+      <p className="text-sm">
+        © 2023 Ansh Verma
+      </p>
     </footer >
   );
 }
