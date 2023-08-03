@@ -5,11 +5,20 @@ import { Experience } from "./sections/Experience";
 import { Intro } from "./sections/Intro";
 import { Skills } from "./sections/Skills";
 
-
-
-
 export function Home() {
-  const navSections = ["Home", "About", "Experience", "Education", "Skills", "Projects", "Contact", "Resume", "Blog", "Testimonials", "FAQ"];
+  const navSections = [
+    "Home",
+    "About",
+    "Experience",
+    "Education",
+    "Skills",
+    "Projects",
+    "Contact",
+    "Resume",
+    "Blog",
+    "Testimonials",
+    "FAQ",
+  ];
   return (
     <div className="flex flex-col items-center justify-center py-2">
       <Header navSections={navSections} />

@@ -1,12 +1,15 @@
-import { NextUIProvider } from '@nextui-org/react';
+import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider } from "next-themes";
-import { Home } from './pages/Home';
-
+import { Home } from "./pages/Home";
 
 function App() {
   return (
     <NextUIProvider>
-      <ThemeProvider attribute="class" disableTransitionOnChange defaultTheme="dark">
+      <ThemeProvider
+        attribute="class"
+        disableTransitionOnChange
+        defaultTheme="dark"
+      >
         <Home />
       </ThemeProvider>
     </NextUIProvider>

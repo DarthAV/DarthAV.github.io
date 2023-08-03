@@ -1,4 +1,3 @@
-
 import { Divider } from "@nextui-org/react";
 
 // take two props: title and subtitle
@@ -18,20 +17,16 @@ import { Divider } from "@nextui-org/react";
 // }
 
 interface SectionHeaderProps {
-    title: string;
-    subtitle: string;
+  title: string;
+  subtitle: string;
 }
 
 export function SectionHeader({ title, subtitle }: SectionHeaderProps) {
-    return (
-        <div className="flex flex-col items-center justify-center h-24">
-            <p className="text-4xl font-bold">
-                {title}
-            </p >
-            <p className="text-md ">
-                {subtitle}
-            </p>
-            <Divider />
-        </div>
-    );
+  return (
+    <div className="flex flex-col items-center justify-center h-24">
+      <p className="text-4xl font-bold">{title}</p>
+      <p className="text-md ">{subtitle}</p>
+      <Divider />
+    </div>
+  );
 }
