@@ -2,10 +2,10 @@ import { Card, CardBody, CardHeader, Chip } from "@nextui-org/react";
 import { SectionHeader } from "../../components/SectionHeader";
 
 const skillsList = [
-  "Python",
   "Java",
-  "C",
+  "C#",
   "C++",
+  "Python",
   "JavaScript",
   "TypeScript",
   "HTML",
@@ -28,7 +28,7 @@ export function Skills() {
             Programming Languages
           </CardHeader>
           <CardBody>
-            Python, Java, C, C++, JavaScript, TypeScript, HTML, CSS
+            Python, Java, C#, C++, JavaScript, TypeScript, HTML, CSS
           </CardBody>
         </Card>
         <Card isBlurred>

@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, CardHeader, Image } from "@nextui-org/react";
+import { Card, CardHeader, Image } from "@nextui-org/react";
 import { SectionHeader } from "../../components/SectionHeader";
 
 interface EducationCardProps {

@@ -1,4 +1,5 @@
 import { Footer, Header } from "../components/HeaderFooter";
+import ScrollTop from "../components/ScrollTop";
 import { About } from "./sections/About";
 import { Education } from "./sections/Education";
 import { Experience } from "./sections/Experience";
@@ -6,16 +7,7 @@ import { Intro } from "./sections/Intro";
 import { Skills } from "./sections/Skills";
 
 export function Home() {
-  const navSections = [
-    "Home",
-    "About",
-    "Experience",
-    "Education",
-    "Skills",
-    "Projects",
-    "Contact",
-    "Resume",
-  ];
+  const navSections = ["Home", "About", "Experience", "Education", "Skills"];
   return (
     <div className="flex flex-col items-center justify-center bg-neutral-900">
       <Header navSections={navSections} />
@@ -26,6 +18,7 @@ export function Home() {
         <Experience />
         <Skills />
       </div>
+      <ScrollTop />
       <Footer navSections={navSections} />
     </div>
   );
