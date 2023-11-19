@@ -13,12 +13,9 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <Button
-      isIconOnly
-      variant="light"
-      startIcon={isDark ? <WeatherSunny24Regular /> : <WeatherMoon24Regular />}
-      onPress={toggleTheme}
-    />
+    <Button isIconOnly variant="light" onPress={toggleTheme}>
+      {isDark ? <WeatherSunny24Regular /> : <WeatherMoon24Regular />}
+    </Button>
   );
 };
 

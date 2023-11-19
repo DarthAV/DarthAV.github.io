@@ -18,35 +18,36 @@ interface HeaderFooterProps {
 export function Header({ navSections }: HeaderFooterProps) {
   return (
     // https://nextui.org/docs/components/navbar
-    <Navbar
-      isBordered
-      position="sticky"
-      className="flex justify-between items-center"
-    >
-      <NavbarBrand>
-        <p className="text-xl font-bold">Ansh</p>
-      </NavbarBrand>
+    <Navbar isBordered position="sticky" className="flex items-center">
+      <NavbarContent className="mx-4">
+        <NavbarMenuToggle aria-label={"Toggle menu"} className="sm:hidden" />
+        <NavbarBrand>
+          <p className="text-xl font-bold">Ansh</p>
+        </NavbarBrand>
+      </NavbarContent>
+
       <NavbarContent
-        className="mx-4 hidden sm:flex " /* enableCursorHighlight variant={"highlight"} */
+        className="hidden mx-4 sm:flex"
+        justify="center"
+        /* enableCursorHighlight variant={"highlight"} */
       >
         {navSections.map((item) => (
           <NavbarItem key={item}>
-            <Link href={`#${item}`}>{item}</Link>
+            <Link color="foreground" href={`#${item}`}>
+              {item}
+            </Link>
           </NavbarItem>
         ))}
       </NavbarContent>
 
-      <NavbarContent className="mx-4">
-        <NavbarMenuToggle
-          aria-label="toggle navigation menu"
-          className="sm:hidden"
-        />
+      <NavbarContent justify="end">
         <ThemeSwitcher />
       </NavbarContent>
+
       <NavbarMenu>
         {navSections.map((item) => (
           <NavbarMenuItem key={item}>
-            <Link href="#">{item}</Link>
+            <Link href={`#${item}`}>{item}</Link>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
@@ -56,9 +57,9 @@ export function Header({ navSections }: HeaderFooterProps) {
 
 export function Footer({ navSections }: HeaderFooterProps) {
   return (
-    <footer className="flex flex-col items-center justify-center h-24">
-      <p className="text-2xl font-bold">Ansh Verma</p>
+    <footer className="flex flex-col items-center justify-center h-24 my-12 w-max gap-4">
       <Divider />
+      <p className="text-2xl font-bold">Ansh Verma</p>
       <div className="flex flex-wrap h-5 gap-4 justify-center">
         {navSections.map((item) => (
           <Link key={item} href={`#${item}`}>

@@ -15,18 +15,17 @@ export function Home() {
     "Projects",
     "Contact",
     "Resume",
-    "Blog",
-    "Testimonials",
-    "FAQ",
   ];
   return (
-    <div className="flex flex-col items-center justify-center py-2">
+    <div className="flex flex-col items-center justify-center bg-neutral-900">
       <Header navSections={navSections} />
-      <Intro />
-      <About />
-      <Education />
-      <Experience />
-      <Skills />
+      <div className="p-10 max-w-4xl">
+        <Intro />
+        <About />
+        <Education />
+        <Experience />
+        <Skills />
+      </div>
       <Footer navSections={navSections} />
     </div>
   );
