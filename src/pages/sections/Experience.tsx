@@ -145,9 +145,7 @@ export function Experience() {
   };
   return (
     <div>
-      <SectionHeader
-        {...{ title: "Experience", subtitle: "My work experience" }}
-      />
+      <SectionHeader title="Experience" subtitle="My Work Experience" />
       <div className="grid gap-4">
         {positions.positionHistory.map((experience, index) => (
           <ExperienceCard

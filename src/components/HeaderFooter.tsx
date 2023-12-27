@@ -67,7 +67,7 @@ export function Footer({ navSections }: HeaderFooterProps) {
           </Link>
         ))}
       </div>
-      <p className="text-sm">© 2023 Ansh Verma</p>
+      <p className="text-sm">© 2024 Ansh Verma</p>
     </footer>
   );
 }

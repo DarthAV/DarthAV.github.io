@@ -1,4 +1,4 @@
-import { Card, CardHeader, Image } from "@nextui-org/react";
+import { Card, CardHeader, Image, Link } from "@nextui-org/react";
 import { SectionHeader } from "../../components/SectionHeader";
 
 interface EducationCardProps {
@@ -23,7 +23,7 @@ function EducationCard({
   endYear,
 }: EducationCardProps) {
   return (
-    <Card isBlurred>
+    <Card isBlurred as={Link} href={linkedInUrl} isExternal isBlock>
       <CardHeader className="flex gap-3">
         <Image
           alt={schoolName + " logo"}
@@ -40,9 +40,6 @@ function EducationCard({
           </p>
         </div>
       </CardHeader>
-      {/* <CardBody>
-        <Button>View on LinkedIn</Button>
-      </CardBody> */}
     </Card>
   );
 }
@@ -95,9 +92,7 @@ export function Education() {
 
   return (
     <div className="justify-evenly">
-      <SectionHeader
-        {...{ title: "Education", subtitle: "My academic background" }}
-      />
+      <SectionHeader title="Education" subtitle="My Academic Background" />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {educationData.educationHistory.map((education, index) => (
           <EducationCard
