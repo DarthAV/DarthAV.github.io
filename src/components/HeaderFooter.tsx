@@ -4,11 +4,11 @@ import {
   Navbar,
   NavbarBrand,
   NavbarContent,
-  NavbarItem,
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/react";
+import { HoverEffect } from "./HoverLink";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 interface HeaderFooterProps {
@@ -26,18 +26,8 @@ export function Header({ navSections }: HeaderFooterProps) {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent
-        className="hidden mx-4 sm:flex"
-        justify="center"
-        /* enableCursorHighlight variant={"highlight"} */
-      >
-        {navSections.map((item) => (
-          <NavbarItem key={item}>
-            <Link color="foreground" href={`#${item}`}>
-              {item}
-            </Link>
-          </NavbarItem>
-        ))}
+      <NavbarContent className="hidden mx-4 sm:flex" justify="center">
+        <HoverEffect items={navSections} />
       </NavbarContent>
 
       <NavbarContent justify="end">

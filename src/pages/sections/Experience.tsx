@@ -49,10 +49,16 @@ function ExperienceCard({
               startEndDate.end.year}
           </p>
         </div>
+        <Image
+          alt={companyName + " logo"}
+          height={80}
+          width={80}
+          radius="sm"
+          src={companyLogoUrl}
+          className="ml-auto order-3"
+        />
+        {/* <Button as={Link}>View on LinkedIn</Button> */}
       </CardHeader>
-      {/* <CardBody>
-        <Button>View on LinkedIn</Button>
-      </CardBody> */}
     </Card>
   );
 }
