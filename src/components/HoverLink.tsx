@@ -30,7 +30,7 @@ export const HoverEffect = ({
             <AnimatePresence>
               {hoveredIndex === idx && (
                 <motion.span
-                  className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.3] block  rounded-2xl"
+                  className="absolute z-10 inset-0 h-full w-full bg-neutral-200/[0.8] dark:bg-slate-800/[0.8] block  rounded-2xl"
                   layoutId="hoverBackground"
                   initial={{ opacity: 0 }}
                   animate={{
@@ -44,7 +44,9 @@ export const HoverEffect = ({
                 />
               )}
             </AnimatePresence>
-            {item}
+            <div className="relative z-10">
+              {item}
+            </div>
           </Link>
         </NavbarItem>
       ))}

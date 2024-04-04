@@ -10,7 +10,7 @@ import { Visited } from "./sections/Visited";
 export function Home() {
   const navSections = ["Home", "About", "Experience", "Education", "Skills"];
   return (
-    <div className="flex flex-col items-center justify-center bg-neutral-900">
+    <div className="flex flex-col items-center justify-center dark:bg-neutral-900">
       <Header navSections={navSections} />
       <div className="p-10 max-w-5xl">
         <Intro />
