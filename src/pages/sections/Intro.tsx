@@ -3,7 +3,7 @@ import Profile1 from "../../assets/img/medium/profile1.jpg";
 
 export function Intro() {
   return (
-    <div className="flex flex-wrap justify-between">
+    <div className="flex flex-wrap justify-between items-center">
       <div>
         <p className="text-4xl font-bold from-blue-400 to-purple-500 bg-gradient-to-tr bg-clip-text text-transparent">
           Hi, I'm Ansh Verma

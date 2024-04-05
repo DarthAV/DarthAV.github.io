@@ -1,7 +1,7 @@
-import { NavbarItem, Link } from "@nextui-org/react";
-import { cn } from "../utils/cn";
+import { Link, NavbarItem } from "@nextui-org/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { cn } from "../utils/cn";
 
 export const HoverNavLink = ({
   items,

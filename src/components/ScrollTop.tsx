@@ -1,6 +1,6 @@
 import { ArrowUp24Regular } from "@fluentui/react-icons";
 import { Button } from "@nextui-org/react";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const ScrollTop = () => {
   const [showButton, setShowButton] = useState(false);

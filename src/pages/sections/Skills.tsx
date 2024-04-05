@@ -1,46 +1,11 @@
 import { Card, CardBody, CardHeader, Chip } from "@nextui-org/react";
 import { SectionHeader } from "../../components/SectionHeader";
+import { conceptsList, languagesList } from "../../data/skills";
 
-const languagesList = [
-  "Java",
-  "C#",
-  "C++",
-  "Python",
-  "JavaScript",
-  "TypeScript",
-  "HTML",
-  "CSS",
-];
-const conceptsList = [
-  "Object-Oriented Programming (OOP)",
-  "Artificial Intelligence (AI)",
-  "Git",
-  "DevOps",
-  "Computer Networking",
-];
 export function Skills() {
   return (
     <div>
       <SectionHeader title="Skills" subtitle="My Technical Proficiency" />
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <Card isBlurred>
-          <CardHeader className="uppercase font-bold text-lg">
-            Programming Languages
-          </CardHeader>
-          <CardBody>
-            Python, Java, C#, C++, JavaScript, TypeScript, HTML, CSS
-          </CardBody>
-        </Card>
-        <Card isBlurred>
-          <CardHeader className="uppercase font-bold text-lg">
-            Concepts
-          </CardHeader>
-          <CardBody>
-            Object-Oriented Programming (OOP), Artificial Intelligence (AI),
-            Git, DevOps, Computer Networking
-          </CardBody>
-        </Card>
-      </div> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Card isBlurred>
           <CardHeader className="uppercase font-bold text-lg">
@@ -70,7 +35,7 @@ export function Skills() {
             </div>
           </CardBody>
         </Card>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 }

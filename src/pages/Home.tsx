@@ -8,7 +8,7 @@ import { Skills } from "./sections/Skills";
 import { Visited } from "./sections/Visited";
 
 export function Home() {
-  const navSections = ["Home", "About", "Experience", "Education", "Skills"];
+  const navSections = ["Home", "About", "Education", "Experience", "Skills"];
   return (
     <div className="flex flex-col items-center justify-center dark:bg-neutral-900">
       <Header navSections={navSections} />
@@ -18,7 +18,7 @@ export function Home() {
         <Education />
         <Experience />
         <Skills />
-        <Visited />
+        {/* <Visited /> */}
       </div>
       <ScrollTop />
       <Footer navSections={navSections} />
