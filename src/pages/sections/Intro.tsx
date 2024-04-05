@@ -1,4 +1,5 @@
 import { Image } from "@nextui-org/react";
+import Profile1 from "../../assets/img/medium/profile1.jpg";
 
 export function Intro() {
   return (
@@ -14,12 +15,11 @@ export function Intro() {
       </div>
       <Image
         alt="Ansh Verma"
-        width={150}
-        height={150}
+        width={250}
+        height={250}
         radius="sm"
         isBlurred
-        // src="src\assets\img\medium\profile1.jpg"
-        src="https://styles.redditmedia.com/t5_2k2eoh/styles/communityIcon_bc8xe371fbt41.jpg"
+        src={Profile1}
       />
     </div>
   );

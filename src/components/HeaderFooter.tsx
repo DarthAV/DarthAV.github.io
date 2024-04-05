@@ -8,7 +8,7 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/react";
-import { HoverEffect } from "./HoverLink";
+import { HoverNavLink } from "./HoverNavLink";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 interface HeaderFooterProps {
@@ -27,7 +27,7 @@ export function Header({ navSections }: HeaderFooterProps) {
       </NavbarContent>
 
       <NavbarContent className="hidden mx-4 sm:flex" justify="center">
-        <HoverEffect items={navSections} />
+        <HoverNavLink items={navSections} />
       </NavbarContent>
 
       <NavbarContent justify="end">
@@ -57,7 +57,8 @@ export function Footer({ navSections }: HeaderFooterProps) {
           </Link>
         ))}
       </div>
-      <p className="text-sm">© 2024 Ansh Verma</p>
+      <p className="text-sm">Made with 💖</p>
+      <p className="text-sm">© {new Date().getFullYear()} Ansh Verma</p>
     </footer>
   );
 }
