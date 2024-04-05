@@ -91,7 +91,7 @@ export function Experience() {
           />
         ))}
         <div className="flex flex-col items-center justify-center">
-          <Button variant="flat" as={Link} isExternal="isExternal" href={linkedInProfile} className="w-fit">
+          <Button variant="flat" as={Link} isExternal href={linkedInProfile} className="w-fit">
             See More on LinkedIn
           </Button>
         </div>

@@ -29,7 +29,7 @@ const ScrollTop = () => {
         isIconOnly
         color="primary"
         onPress={scrollToTop}
-        className={`fixed bottom-20 right-20 transition-opacity duration-500 ease-in-out opacity-${showButton ? '100' : '0'}`}
+        className={`fixed bottom-20 right-20 transition-opacity duration-500 ease-in-out opacity-0 ${showButton ? 'md:opacity-100' : 'md:opacity-0'}`}
       >
         <ArrowUp24Regular />
       </Button>
