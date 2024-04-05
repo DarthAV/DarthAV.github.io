@@ -25,23 +25,14 @@ const ScrollTop = () => {
 
   return (
     <div>
-      {showButton ? (
-        <Button
-          isIconOnly
-          onPress={scrollToTop}
-          className="fixed bottom-20 right-20 transition-opacity duration-500 ease-in-out opacity-100"
-        >
-          <ArrowUp24Regular />
-        </Button>
-      ) : (
-        <Button
-          isIconOnly
-          onPress={scrollToTop}
-          className="fixed bottom-20 right-20 transition-opacity duration-500 ease-in-out opacity-0"
-        >
-          <ArrowUp24Regular />
-        </Button>
-      )}
+      <Button
+        isIconOnly
+        color="primary"
+        onPress={scrollToTop}
+        className={`fixed bottom-20 right-20 transition-opacity duration-500 ease-in-out opacity-${showButton ? '100' : '0'}`}
+      >
+        <ArrowUp24Regular />
+      </Button>
     </div>
   );
 };

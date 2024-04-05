@@ -40,14 +40,18 @@ function ExperienceCard({
         />
         <div className="flex flex-col">
           <p className="text-lg">{positionTitle}</p>
-          <p className="text-md">{companyName + " - " + companyLocation}</p>
+          <p className="text-md">{companyName}</p>
           <p className="text-small text-default-500">
-            {startEndDate.start.month +
+            {companyLocation +
+              " (" +
+              startEndDate.start.month +
               "/" +
               startEndDate.start.year +
               " - " +
               (startEndDate.end.month ? startEndDate.end.month + "/" : "") +
-              startEndDate.end.year}
+              startEndDate.end.year +
+              ")"
+            }
           </p>
         </div>
         {/* <Image
@@ -87,7 +91,7 @@ export function Experience() {
           />
         ))}
         <div className="flex flex-col items-center justify-center">
-          <Button variant="flat" as={Link} isExternal="isExternal" href={linkedInProfile} className="w-1/4">
+          <Button variant="flat" as={Link} isExternal="isExternal" href={linkedInProfile} className="w-fit">
             See More on LinkedIn
           </Button>
         </div>

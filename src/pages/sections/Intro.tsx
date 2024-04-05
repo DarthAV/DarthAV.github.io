@@ -3,13 +3,17 @@ import Profile1 from "../../assets/img/medium/profile1.jpg";
 
 export function Intro() {
   return (
-    <div className="flex flex-wrap justify-between items-center">
+    <div className="flex flex-wrap sm:flex-nowrap justify-between items-center gap-2">
       <div>
-        <p className="text-4xl font-bold from-blue-400 to-purple-500 bg-gradient-to-tr bg-clip-text text-transparent">
+        <p className="text-6xl font-bold
+          bg-gradient-to-br from-orange-400 from-10% via-red-400 via-40% to-blue-500 
+          bg-clip-text text-transparent">
           Hi, I'm Ansh Verma
         </p>
-        <h3> Computer Science Student</h3>
-        <p className="text-xl font-bold">
+        <p className="text-2xl text-default-800">
+          Computer Science Student
+        </p>
+        <p className="text-md font-bold text-default-500">
           University of Illinois Urbana-Champaign
         </p>
       </div>
@@ -17,7 +21,7 @@ export function Intro() {
         alt="Ansh Verma"
         width={250}
         height={250}
-        radius="sm"
+        radius="full"
         isBlurred
         src={Profile1}
       />

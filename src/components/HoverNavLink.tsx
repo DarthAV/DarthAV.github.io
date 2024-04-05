@@ -23,14 +23,14 @@ export const HoverNavLink = ({
         <NavbarItem key={item}>
           <Link
             href={`#${item}`}
-            className="relative group  block p-2 h-full w-full"
+            className="relative group block p-2 h-full w-full"
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
             <AnimatePresence>
               {hoveredIndex === idx && (
                 <motion.span
-                  className="absolute z-10 inset-0 h-full w-full bg-primary block  rounded-xl"
+                  className="absolute z-10 inset-0 h-full w-full bg-primary block rounded-xl"
                   layoutId="hoverBackground"
                   initial={{ opacity: 0 }}
                   animate={{
@@ -44,9 +44,9 @@ export const HoverNavLink = ({
                 />
               )}
             </AnimatePresence>
-            <div className="relative z-10">
+            <p className="text-l text-black dark:text-white relative z-10">
               {item}
-            </div>
+            </p>
           </Link>
         </NavbarItem>
       ))}

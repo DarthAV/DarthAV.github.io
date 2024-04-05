@@ -1,6 +1,7 @@
 export const languagesList = [
     "Java",
     "C#",
+    "C",
     "C++",
     "Python",
     "JavaScript",

@@ -12,7 +12,7 @@ export function Skills() {
             Programming Languages
           </CardHeader>
           <CardBody>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 ">
               {languagesList.map((skill, index) => (
                 <Chip key={index} size="lg" variant="flat">
                   {skill}
