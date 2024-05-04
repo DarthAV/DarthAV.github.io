@@ -1,11 +1,13 @@
+import uiuc from "../assets/img/medium/uiuc.png";
+import interlake from "../assets/img/medium/interlake.png";
+
 const educationData = {
     educationHistory: [
         {
             school: {
                 schoolName: "University of Illinois Urbana-Champaign",
                 schoolLocation: "Champaign, Illinois, United States",
-                schoolLogoUrl:
-                    "https://styles.redditmedia.com/t5_2k2eoh/styles/communityIcon_bc8xe371fbt41.jpg",
+                schoolLogoUrl: uiuc,
                 linkedInUrl:
                     "https://www.linkedin.com/organization/university-of-illinois-urbana-champaign",
             },
@@ -23,8 +25,7 @@ const educationData = {
         {
             school: {
                 schoolName: "Interlake Senior High School",
-                schoolLogoUrl:
-                    "https://media-exp1.licdn.com/dms/image/C4E0BAQG7FBbC4jRRIQ/company-logo_200_200/0/1539309296578?e=2159024400&v=beta&t=OlSQFNqdYtKRuWFINpiICNp7jxQro_uq8ya9hhRmqCE",
+                schoolLogoUrl: interlake,
                 linkedInUrl:
                     "https://www.linkedin.com/organization/interlake-senior-high-school",
             },
