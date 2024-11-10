@@ -17,6 +17,7 @@ interface HeaderFooterProps {
 }
 
 export function Header({ navSections }: HeaderFooterProps) {
+  if (navSections.length === 0) return null
   return (
     // https://nextui.org/docs/components/navbar
     <Navbar isBordered position="sticky" className="flex items-center">

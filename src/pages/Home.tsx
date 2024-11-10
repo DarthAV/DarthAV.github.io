@@ -8,8 +8,8 @@ import { Skills } from "./sections/Skills";
 import { Visited } from "./sections/Visited";
 
 export function Home() {
-  // const navSections = ["Home", "Education", "Experience", "Skills"];
-  const navSections: string[] = [];
+  const navSections = ["Home", "Education", "Experience", "Skills"];
+  // const navSections: string[] = [];
   return (
     <div className="flex flex-col items-center justify-center dark:bg-neutral-900">
       <Header navSections={navSections} />
