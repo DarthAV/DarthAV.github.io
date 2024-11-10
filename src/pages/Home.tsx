@@ -5,6 +5,7 @@ import { Education } from "./sections/Education";
 import { Experience } from "./sections/Experience";
 import { Intro } from "./sections/Intro";
 import { Skills } from "./sections/Skills";
+import { Projects } from "./sections/Projects";
 import { Visited } from "./sections/Visited";
 
 export function Home() {
@@ -19,6 +20,7 @@ export function Home() {
         <Education />
         <Experience />
         <Skills />
+        <Projects />
         {/* <Visited /> */}
       </div>
       <ScrollTop />
