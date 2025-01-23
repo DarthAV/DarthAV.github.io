@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader, Chip, Tooltip } from "@nextui-org/react";
+import { Card, CardBody, CardHeader, Chip, Tooltip } from "@heroui/react";
 import { SectionHeader } from "../../components/SectionHeader";
 import { conceptsList, toolsList } from "../../data/skills";
 
