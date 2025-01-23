@@ -1,4 +1,4 @@
-import { Button, Card, CardHeader, Chip, Image, Link, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, cn, useDisclosure } from "@nextui-org/react";
+import { Button, Card, CardHeader, Chip, Image, Link, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, cn, useDisclosure } from "@heroui/react";
 import React, { useEffect, useState } from "react";
 import { SectionHeader } from "../../components/SectionHeader";
 import projectsData from "../../data/projects";

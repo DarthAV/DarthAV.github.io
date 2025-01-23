@@ -51,9 +51,9 @@ const projectsData = {
     },
     {
       title: "Portfolio Website",
-      description: "Developed a personal portfolio website using React and styled with NextUI to showcase projects and professional achievements. Designed responsive layouts to ensure a seamless user experience across different screen sizes and devices. Optimized the website for fast load times and search engine visibility (SEO).",
+      description: "Developed a personal portfolio website using React and styled with HeroUI to showcase projects and professional achievements. Designed responsive layouts to ensure a seamless user experience across different screen sizes and devices. Optimized the website for fast load times and search engine visibility (SEO).",
       image: "https://via.placeholder.com/150",
-      skills: ["React", "NextUI", "SEO"],
+      skills: ["React", "HeroUI", "SEO"],
       githubUrl: "https://github.com/DarthAV",
     },
     {
