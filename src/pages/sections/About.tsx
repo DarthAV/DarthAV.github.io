@@ -1,4 +1,4 @@
-import { Button, ButtonGroup } from "@nextui-org/react";
+import { Button, ButtonGroup } from "@heroui/react";
 import { SectionHeader } from "../../components/SectionHeader";
 
 
