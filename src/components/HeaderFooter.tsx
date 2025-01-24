@@ -8,7 +8,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { HoverNavLink } from "./HoverNavLink";
 import ThemeSwitcher from "./ThemeSwitcher";
 
@@ -20,22 +20,19 @@ export function Header({ navSections }: HeaderFooterProps) {
   if (navSections.length === 0) return null
   return (
     // https://nextui.org/docs/components/navbar
-    <Navbar isBordered position="sticky" className="flex items-center">
+    (<Navbar isBordered position="sticky" className="flex items-center">
       <NavbarContent className="mx-4">
         <NavbarMenuToggle aria-label={"Toggle menu"} className="sm:hidden" />
         <NavbarBrand>
           <p className="text-2xl font-bold">Ansh</p>
         </NavbarBrand>
       </NavbarContent>
-
       <NavbarContent className="hidden mx-4 sm:flex" justify="center">
         <HoverNavLink items={navSections} />
       </NavbarContent>
-
       <NavbarContent justify="end">
         <ThemeSwitcher />
       </NavbarContent>
-
       <NavbarMenu>
         {navSections.map((item) => (
           <NavbarMenuItem key={item}>
@@ -43,7 +40,7 @@ export function Header({ navSections }: HeaderFooterProps) {
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
-    </Navbar>
+    </Navbar>)
   );
 }
 

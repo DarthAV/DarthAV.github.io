@@ -1,4 +1,4 @@
-import { Card, CardHeader, Image, Link } from "@nextui-org/react";
+import { Card, CardHeader, Image, Link } from "@heroui/react";
 import { SectionHeader } from "../../components/SectionHeader";
 import educationData from "../../data/education";
 

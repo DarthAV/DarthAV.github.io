@@ -1,4 +1,4 @@
-import { Image } from "@nextui-org/react";
+import { Image } from "@heroui/react";
 import Profile1 from "../../assets/img/medium/profile1.jpg";
 
 export function Intro() {
