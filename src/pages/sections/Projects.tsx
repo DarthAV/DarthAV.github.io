@@ -1,5 +1,4 @@
-import { Button, Card, CardHeader, Chip, Image, Link, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, cn, useDisclosure } from "@heroui/react";
-import React, { useEffect, useState } from "react";
+import { Card, CardHeader, Chip, Image } from "@heroui/react";
 import { SectionHeader } from "../../components/SectionHeader";
 import projectsData from "../../data/projects";
 
@@ -18,76 +17,53 @@ function ProjectCard({
     skills,
     githubUrl,
 }: ProjectCardProps) {
-    const { isOpen, onOpen, onOpenChange } = useDisclosure();
-
     return (
-        <>
-            <Card isBlurred onClick={onOpen} className="cursor-pointer h-96 w-72">
-                <CardHeader className="flex flex-col items-center">
-                    {image && (
-                        <Image
-                            alt={title + " image"}
-                            height={150}
-                            width={150}
-                            radius="sm"
-                            src={image}
-                            className="mb-4"
-                        />
-                    )}
-                    <div className="flex flex-col items-center">
-                        <p className="text-lg">{title}</p>
-                        <div className="flex flex-wrap gap-2 mt-2">
-                            {skills.map((skill, index) => (
-                                <Chip key={index} size="sm" variant="flat">
-                                    {skill}
-                                </Chip>
-                            ))}
-                        </div>
+        <Card isBlurred className="cursor-pointer h-80 w-72">
+            <CardHeader className="flex flex-col items-center">
+                {image && (
+                    <Image
+                        alt={title + " image"}
+                        height={150}
+                        width={275}
+                        radius="sm"
+                        src={image}
+                        className="mb-4"
+                    />
+                )}
+                <div className="flex flex-col items-center">
+                    <p className="text-lg text-center line-clamp-2 h-14">{title}</p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                        {skills.map((skill, index) => (
+                            <Chip key={index} size="sm" variant="flat">
+                                {skill}
+                            </Chip>
+                        ))}
                     </div>
-                </CardHeader>
-            </Card >
-
-            <Modal backdrop="blur" isOpen={isOpen} onOpenChange={onOpenChange}>
-                <ModalContent>
-                    {(onClose) => (
-                        <>
-                            <ModalHeader className="flex flex-col gap-1">{title}</ModalHeader>
-                            <ModalBody>
-                                {image && (
-                                    <Image
-                                        alt={title + " image"}
-                                        height={150}
-                                        width={150}
-                                        radius="sm"
-                                        src={image}
-                                        className="mb-4"
-                                    />
-                                )}
-                                <p>{description}</p>
-                                <div className="flex flex-wrap gap-2 mt-2">
-                                    {skills.map((skill, index) => (
-                                        <Chip key={index} size="sm" variant="flat">
-                                            {skill}
-                                        </Chip>
-                                    ))}
-                                </div>
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="primary" as={Link} href={githubUrl} isExternal>
-                                    View Source
-                                </Button>
-                                <Button color="danger" variant="light" onPress={onClose}>
-                                    Close
-                                </Button>
-                            </ModalFooter>
-                        </>
-                    )}
-                </ModalContent>
-            </Modal>
-        </>
+                </div>
+            </CardHeader>
+        </Card >
     );
 }
 
+const ScrollableCards = ({ items }: { items: ProjectCardProps[] }) => {
+    return (
+        <div className="flex overflow-x-auto space-x-4 p-4">
+            {items.map((item, idx) => (
+                <div key={idx} className="flex-shrink-0">
+                    <ProjectCard
+                        title={item.title}
+                        description={item.description}
+                        image={item.image}
+                        skills={item.skills}
+                        githubUrl={item.githubUrl}
+                    />
+                </div>
+            ))}
+        </div>
+    );
+}
+
+/*
 const InfiniteMovingCards = ({
     items,
     direction = "left",
@@ -185,13 +161,14 @@ const InfiniteMovingCards = ({
         </div>
     );
 };
-
+*/
 
 export function Projects() {
     return (
         <div className="justify-evenly">
             <SectionHeader title="Projects" subtitle="My Personal Projects" />
-            <InfiniteMovingCards items={projectsData.projects} direction="left" speed="slow" />
+            {/* <InfiniteMovingCards items={projectsData.projects} direction="left" speed="slow" /> */}
+            <ScrollableCards items={projectsData.projects} />
         </div>
     );
 }

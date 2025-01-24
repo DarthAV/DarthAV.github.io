@@ -1,3 +1,5 @@
+import tripvisor from "../assets/img/medium/tripvisor.png";
+
 const projectsData = {
   projects: [
     {
@@ -45,7 +47,7 @@ const projectsData = {
     {
       title: "TripVisor",
       description: "Developed a mobile app in React Native and TypeScript to help users plan road trips with interactive maps and route-building capabilities. Integrated Google Maps, Places, and Routes APIs to allow users to add, reorder, and view detailed stop information, including suggested breaks and night-stay options. Leveraged Azure Cosmos DB for NoSQL storage, allowing users to save trip data across devices via Google Account linkage, streamlining the travel planning experience.",
-      image: "https://via.placeholder.com/150",
+      image: tripvisor,
       skills: ["React Native", "TypeScript", "Google Maps API", "Azure Cosmos DB"],
       githubUrl: "https://github.com/DarthAV",
     },
