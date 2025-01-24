@@ -1,13 +1,14 @@
-import { Card, CardHeader, Chip, Image } from "@heroui/react";
+import { Card, CardBody, CardFooter, CardHeader, Chip, Image } from "@heroui/react";
 import { SectionHeader } from "../../components/SectionHeader";
 import projectsData from "../../data/projects";
+import { useState } from "react";
 
 interface ProjectCardProps {
     title: string;
     description: string;
     image?: string;
     skills: string[];
-    githubUrl: string;
+    githubUrl?: string;
 }
 
 function ProjectCard({
@@ -17,10 +18,12 @@ function ProjectCard({
     skills,
     githubUrl,
 }: ProjectCardProps) {
+    const [showDetails, setShowDetails] = useState(false);
+
     return (
-        <Card isBlurred className="cursor-pointer h-80 w-72">
-            <CardHeader className="flex flex-col items-center">
-                {image && (
+        <Card isBlurred className="min-h-80 w-72">
+            <CardHeader className="flex flex-col min-h-60 items-center">
+                {!showDetails && image && (
                     <Image
                         alt={title + " image"}
                         height={150}
@@ -32,15 +35,41 @@ function ProjectCard({
                 )}
                 <div className="flex flex-col items-center">
                     <p className="text-lg text-center line-clamp-2 h-14">{title}</p>
-                    <div className="flex flex-wrap gap-2 mt-2">
-                        {skills.map((skill, index) => (
-                            <Chip key={index} size="sm" variant="flat">
-                                {skill}
-                            </Chip>
-                        ))}
-                    </div>
+                    {showDetails && (
+                        <p className="text-sm text-center">{description}</p>
+                    )}
+
                 </div>
             </CardHeader>
+            <CardBody className="flex flex-col items-center">
+                <div className="flex flex-wrap gap-2 mt-2">
+                    {skills.map((skill, index) => (
+                        <Chip key={index} size="sm" variant="flat">
+                            {skill}
+                        </Chip>
+                    ))}
+                </div>
+            </CardBody>
+            <CardFooter>
+                <div className="flex justify-between w-full">
+                    <button
+                        onClick={() => setShowDetails((prev) => !prev)}
+                        className="text-sm text-blue-500"
+                    >
+                        {showDetails ? "Hide Details" : "Show Details"}
+                    </button>
+                    {githubUrl && (
+                        <a
+                            href={githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-blue-500"
+                        >
+                            View on GitHub
+                        </a>
+                    )}
+                </div>
+            </CardFooter>
         </Card >
     );
 }
