@@ -9,7 +9,7 @@ const educationData = {
                 schoolLocation: "Champaign, Illinois, United States",
                 schoolLogoUrl: uiuc,
                 linkedInUrl:
-                    "https://www.linkedin.com/organization/university-of-illinois-urbana-champaign",
+                    "https://siebelschool.illinois.edu/",
             },
             degreeName: "BS",
             startEndDate: {
@@ -24,10 +24,10 @@ const educationData = {
         },
         {
             school: {
-                schoolName: "Interlake Senior High School",
+                schoolName: "Interlake High School",
                 schoolLogoUrl: interlake,
                 linkedInUrl:
-                    "https://www.linkedin.com/organization/interlake-senior-high-school",
+                    "https://interlakehigh.bsd405.org/",
             },
             degreeName: "High School Diploma",
             startEndDate: {
