@@ -1,5 +1,5 @@
 import { Image } from "@heroui/react";
-import Profile1 from "../../assets/img/medium/profile1.jpg";
+import Profile2 from "../../assets/img/medium/profile2.jpg";
 
 export function Intro() {
   return (
@@ -23,7 +23,7 @@ export function Intro() {
         height={250}
         radius="full"
         isBlurred
-        src={Profile1}
+        src={Profile2}
       />
     </div>
   );
