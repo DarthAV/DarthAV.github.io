@@ -33,8 +33,7 @@ function ExperienceCard({
       <CardHeader className="flex gap-3">
         <Image
           alt={companyName + " logo"}
-          height={80}
-          width={80}
+          className="w-20 h-20 min-w-[5rem] object-contain"
           radius="sm"
           src={companyLogoUrl}
         />

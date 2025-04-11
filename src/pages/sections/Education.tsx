@@ -28,8 +28,7 @@ function EducationCard({
       <CardHeader className="flex gap-3">
         <Image
           alt={schoolName + " logo"}
-          height={100}
-          width={100}
+          className="w-24 h-24 min-w-[6rem] object-contain"
           radius="sm"
           src={schoolLogoUrl}
         />
