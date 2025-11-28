@@ -1,26 +1,30 @@
 export const toolsList = [
     "CSharp",
-    "C",
     "CPlusPlus",
     "Java",
     "Python",
+    // Other relevant languages / tools
+    "Swift",
+    "C",
     "JavaScript",
     "TypeScript",
-    "HTML5",
-    "CSS3",
     "React",
     "Nodejs",
-    "Bash",
+    "Dot-NET",
+    // Web / infra
+    "HTML5",
+    "Docker",
     "Git",
     "mysql",
-    "Docker",
-    "Dot-NET",
+    "Bash",
 ];
+
 export const conceptsList = [
     "Artificial Intelligence",
     "Systems Programming",
     "Computer Architecture",
     "Networking",
     "Object-Oriented Programming (OOP)",
+    "Cloud Services (Azure/AWS)",
 ];
 
