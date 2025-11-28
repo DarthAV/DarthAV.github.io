@@ -4,7 +4,7 @@
 
 This is the repository for my portfolio website, built using React.
 
-## Developement Info
+## Development Info
 
 ### Installation
 
@@ -15,4 +15,4 @@ This is the repository for my portfolio website, built using React.
 
 ### Deployment
 
-This website is deployed using GitHub pages. Updating the website is as simple as pushing changes to the `main` branch and running `npm run deploy`.
+This website is deployed using GitHub Actions. The deployment pipeline is triggered automatically whenever changes are pushed to the `main` branch. The pipeline builds the project and deploys it to GitHub Pages. No manual steps are required.
