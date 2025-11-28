@@ -28,8 +28,9 @@ export const HoverNavLink = ({
             onMouseLeave={() => setHoveredIndex(null)}
           >
             <AnimatePresence>
-              {hoveredIndex === idx && (
+              {hoveredIndex === idx ? (
                 <motion.span
+                  key={`hover-background-${idx}`}
                   className="absolute z-10 inset-0 h-full w-full bg-primary block rounded-xl"
                   layoutId="hoverBackground"
                   initial={{ opacity: 0 }}
@@ -42,7 +43,7 @@ export const HoverNavLink = ({
                     transition: { duration: 0.15, delay: 0.2 },
                   }}
                 />
-              )}
+              ) : null}
             </AnimatePresence>
             <p className="text-l text-black dark:text-white relative z-10">
               {item}
