@@ -1,11 +1,13 @@
 import { Footer, Header } from "../components/HeaderFooter";
 import ScrollTop from "../components/ScrollTop";
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { About } from "./sections/About";
 import { Education } from "./sections/Education";
 import { Experience } from "./sections/Experience";
 import { Intro } from "./sections/Intro";
 import { Skills } from "./sections/Skills";
 import { Visited } from "./sections/Visited";
+/* eslint-enable @typescript-eslint/no-unused-vars */
 
 export function Home() {
   // const navSections = ["Home", "Education", "Experience", "Skills"];
