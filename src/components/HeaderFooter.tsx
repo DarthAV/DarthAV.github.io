@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Button,
   Divider,
@@ -17,9 +18,11 @@ interface HeaderFooterProps {
 }
 
 export function Header({ navSections }: HeaderFooterProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     // https://nextui.org/docs/components/navbar
-    (<Navbar isBordered className="fixed top-0 z-50 w-full flex items-center">
+    (<Navbar isBordered className="fixed top-0 z-50 w-full flex items-center" isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent className="mx-4">
         <NavbarMenuToggle aria-label={"Toggle menu"} className="sm:hidden" />
         <NavbarBrand>
@@ -35,7 +38,7 @@ export function Header({ navSections }: HeaderFooterProps) {
       <NavbarMenu>
         {navSections.map((item) => (
           <NavbarMenuItem key={item}>
-            <Link href={`#${item}`}>{item}</Link>
+            <Link href={`#${item}`} onPress={() => setIsMenuOpen(false)}>{item}</Link>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
