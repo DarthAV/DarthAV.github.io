@@ -15,16 +15,16 @@ export function Home() {
   return (
     <div id="Home" className="flex flex-col items-center justify-center dark:bg-gradient-to-b dark:from-slate-950 dark:to-slate-900">
       <Header navSections={navSections} />
-      <div className="p-10 max-w-5xl">
+      <div className="px-10 pb-10 pt-28 max-w-5xl">
         <Intro />
         {/* <About /> */}
-        <section id="Education" className="scroll-mt-8">
+        <section id="Education" className="scroll-mt-20">
           <Education />
         </section>
-        <section id="Experience" className="scroll-mt-8">
+        <section id="Experience" className="scroll-mt-20">
           <Experience />
         </section>
-        <section id="Skills" className="scroll-mt-8">
+        <section id="Skills" className="scroll-mt-20">
           <Skills />
         </section>
         {/* <Visited /> */}

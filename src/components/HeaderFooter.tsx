@@ -19,7 +19,7 @@ interface HeaderFooterProps {
 export function Header({ navSections }: HeaderFooterProps) {
   return (
     // https://nextui.org/docs/components/navbar
-    (<Navbar isBordered position="sticky" className="flex items-center">
+    (<Navbar isBordered className="fixed top-0 z-50 w-full flex items-center">
       <NavbarContent className="mx-4">
         <NavbarMenuToggle aria-label={"Toggle menu"} className="sm:hidden" />
         <NavbarBrand>
