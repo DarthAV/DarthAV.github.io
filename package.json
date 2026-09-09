@@ -24,7 +24,7 @@
     "tailwind-merge": "^2.2.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4",
-    "webpack": "^5.94.0"
+    "webpack": "^5.105.4"
   },
   "scripts": {
     "predeploy": "npm run build",
